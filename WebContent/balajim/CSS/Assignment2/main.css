@@ -1,0 +1,49 @@
+body{
+    margin: 10px 20% 10px 20%;
+}
+.content-center{
+    text-align: center;
+    border-bottom: solid;
+    border-bottom-color: green;
+}
+legend {
+    display: block;
+    padding-left: 2px;
+    padding-right: 2px;
+    border: none;
+    color: green;
+}
+/* .name .email .mobile .gender{
+	 margin-left: 15%; 
+	 margin-bottom: 10pt;
+	 align: middle;
+} */
+table{
+	width: 100%;
+}
+.col1 {
+	width: 25%;
+	padding-bottom: 10pt;
+}
+.col2{
+	width: 75%;
+	padding-bottom: 10pt;
+}
+	
+span{
+	color: red;
+}
+
+
+.wrapper{
+    border: 1px dashed red;
+    height: 150px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 150px;
+ }
+ .wrapper .selection{
+   width:150px;
+   border:1px solid #ccc
+ }
+
