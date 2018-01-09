@@ -10,7 +10,7 @@
 		<h1>NCET Campus Placement</h1>
 	</div>
 	<div>
-	<form>
+	<form action="/do" method="post">
 		<fieldset>
 			<legend>Registration Form:</legend>
 			<table>
@@ -65,14 +65,13 @@
 								<option>Punjabi</option>
 								<option>Tamil</option>
 								<option>Telungu</option>
-								<option>Kannada</option>
 						</select></td>
 					</tr>
 
 					<tr>
 						<td class="col1"><label class="self">Self Introduction : </label></td>
 						<td class="col2">
-						<textarea placeholder="Please give a brief introdction about yourself."  rows="5" cols="50"></textarea>
+						<textarea placeholder="Please give a brief introdction about yourself."  rows="5" cols="255" maxlength="50"></textarea>
 						</td>
 					</tr>			
 			</table>
