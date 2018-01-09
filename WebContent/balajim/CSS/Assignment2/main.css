@@ -13,11 +13,6 @@ legend {
     border: none;
     color: green;
 }
-/* .name .email .mobile .gender{
-	 margin-left: 15%; 
-	 margin-bottom: 10pt;
-	 align: middle;
-} */
 table{
 	width: 100%;
 }
@@ -33,17 +28,11 @@ table{
 span{
 	color: red;
 }
-
-
-.wrapper{
-    border: 1px dashed red;
-    height: 150px;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    width: 150px;
- }
- .wrapper .selection{
-   width:150px;
-   border:1px solid #ccc
- }
-
+select {
+	height: 100%;
+	width: 70%;
+}
+textarea {
+	height: 100%;
+	width: 70%;
+}
