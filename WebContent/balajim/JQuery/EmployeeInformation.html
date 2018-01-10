@@ -15,8 +15,34 @@
         input {
             width: 100%;
         }
-
     </style>
+    <script>
+        $(document).ready(function(){
+            $("#addButton").click(function(){
+                var name=$('#givenName').val();
+                var email=$('#givenEmail').val();
+                var phNumber=$('#givenPhNumber').val();
+                var company=$('#givenCompany').val();
+                var template = '<tr class="hidden template">'+
+                '<td class="addedName added">test1</td>'+
+                        '<td class="addedEmail added">test2</td>'+
+                        '<td class="addedPhNumber added">test3</td>'+
+                        '<td class="addedCompany added">test4</td>'+
+                        '<td><a href=""><span class="glyphicon glyphicon-edit"></span></a></td>'+
+                        '<td><a href=""><span class="glyphicon glyphicon-trash"></span></a></td>'+
+                        '</tr>';
+                $('.close').click()
+                $('.addInputs').val("");
+                $('.addedName').html(name)
+                $('.addedEmail').html(email)
+                $('.addedPhNumber').html(phNumber)
+                $('.addedCompany').html(company)
+                $('.added').removeClass("addedName addedEmail addedPhNumber addedCompany added")
+                $(".hidden").removeClass("hidden");
+                $('tbody:last').append(template);
+            });
+        });
+    </script>
 </head>
 <body>
 
@@ -28,7 +54,7 @@
     </div>
     <div class="col-sm-10 table-responsive">
         <div class="text-right">
-            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#AddModal">Add New Employee
+            <button type="button" id="addEmployee" class="btn btn-info" data-toggle="modal" data-target="#AddModal">Add New Employee
             </button>
             <br/>
             <br/>
@@ -45,28 +71,30 @@
                         <div class="col-sm-2">
                             <lable>Name:*</lable>
                         </div>
-                        <div class="col-sm-10"><input type="text" placeholder="Enter name"><br/><br/></div>
+                        <div class="col-sm-10"><input type="text" id="givenName" name="givenName" class="addInputs"
+                                                      placeholder="Enter name"><br/><br/></div>
                         <div class="col-sm-2">
                             <lable>Email:*
                             </lable>
                         </div>
-                        <div class="col-sm-10"><input type="text"
+                        <div class="col-sm-10"><input type="text" class="addInputs" id="givenEmail" name="givenEmail"
                                                       placeholder="Enter Email id (abc@xyz.com)"><br/><br/>
                         </div>
                         <div class="col-sm-2">
                             <lable>Mobile:*</lable>
                         </div>
-                        <div class="col-sm-10"><input type="text"
+                        <div class="col-sm-10"><input type="text" class="addInputs" id="givenPhNumber" name="givenPhNumber"
                                                       placeholder="Enter mobile number(9XXXXXXXXX)"><br/><br/>
                         </div>
                         <div class="col-sm-2">
                             <lable>Company:*</lable>
                         </div>
-                        <div class="col-sm-10"><input type="text" placeholder="Enter company name"><br/><br/>
+                        <div class="col-sm-10"><input type="text" class="addInputs" id="givenCompany" name="givenCompany"
+                                                      placeholder="Enter company name"><br/><br/>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-info">Add</button>
+                        <button type="button" id="addButton" class="btn btn-info">Add</button>
                     </div>
                 </div>
             </div>
@@ -94,6 +122,14 @@
                 <td>sheela.k@gmail.com</td>
                 <td>8865724132</td>
                 <td>wipro</td>
+                <td><a href=""><span class="glyphicon glyphicon-edit"></span></a></td>
+                <td><a href=""><span class="glyphicon glyphicon-trash"></span></a></td>
+            </tr>
+            <tr class="hidden template">
+                <td class="addedName added">test1</td>
+                <td class="addedEmail added">test2</td>
+                <td class="addedPhNumber added">test3</td>
+                <td class="addedCompany added">test4</td>
                 <td><a href=""><span class="glyphicon glyphicon-edit"></span></a></td>
                 <td><a href=""><span class="glyphicon glyphicon-trash"></span></a></td>
             </tr>
